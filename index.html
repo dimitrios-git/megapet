@@ -6,12 +6,13 @@
   <title>Mega Pet Accessories - Δύο καταστήματα στα Τρίκαλα.</title>
   <meta name="description" content="Mega Pet Accessories - Τοπικό pet shop με δύο καταστήματα στα Τρίκαλα. Βρείτε μας εύκολα και γρήγορα." />
   <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="preload" as="image" href="shop1.webp" fetchpriority="high" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <header class="hero">
-    <img src="logo.svg" alt="Mega Pet Logo" class="logo" />
+    <img src="logo.svg" alt="Mega Pet Logo" class="logo" width="210" height="149" decoding="async" />
     <div class="hero-text">
       <h1>Mega Pet Accessories</h1>
       <p class="tagline">Δύο καταστήματα στα Τρίκαλα.</p>
@@ -22,7 +23,10 @@
 
     <!-- LOCATION 1 -->
     <div class="location">
-      <div class="location-bg location-bg-1"></div>
+      <picture class="location-bg" aria-hidden="true">
+        <source srcset="shop1.webp" type="image/webp" />
+        <img src="shop1.webp" width="1920" height="1080" alt="" loading="eager" fetchpriority="high" decoding="async" />
+      </picture>
 
       <div class="location-content">
         <h2>Mega Pet Accessories</h2>
@@ -48,7 +52,10 @@
 
     <!-- LOCATION 2 -->
     <div class="location">
-      <div class="location-bg location-bg-2"></div>
+      <picture class="location-bg" aria-hidden="true">
+        <source srcset="shop2.webp" type="image/webp" />
+        <img src="shop2.webp" width="1920" height="1440" alt="" loading="lazy" fetchpriority="low" decoding="async" />
+      </picture>
 
       <div class="location-content">
         <h2>Mega Pet Grand Accessories</h2>
