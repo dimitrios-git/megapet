@@ -6,11 +6,25 @@ Static, highly optimized landing page for Mega Pet Accessories, a local pet shop
 
 ## Features
 
-- **Two-location highlight**: Split layout showcases both stores with map links, addresses, and phone numbers.
-- **Light parallax & zoom**: Background photos animate differently on mobile and desktop for a polished feel.
-- **Responsive hero**: Logo, title, and tagline adapt across screen sizes.
-- **Accessibility**: Semantic structure (header/main/footer), explicit image dimensions, reduced-motion support.
-- **Performance-first**: Responsive WebP `srcset`, `preload` for the LCP image, and long-lived caching via `.htaccess`.
+- **Two-location highlight**:
+  
+  Split layout showcases both stores with map links, addresses, and phone numbers.
+
+- **Light parallax & zoom**:
+
+  Background photos animate differently on mobile and desktop for a polished feel.
+
+- **Responsive hero**:
+
+  Logo, title, and tagline adapt across screen sizes.
+
+- **Accessibility**:
+
+  Semantic structure (header/main/footer), explicit image dimensions, reduced-motion support.
+
+- **Performance-first**:
+
+  Responsive WebP `srcset`, `preload` for the LCP image, and long-lived caching via `.htaccess`.
   
   ![PageSpeed Insights](pagespeed-insights.png)
 
@@ -19,7 +33,7 @@ Static, highly optimized landing page for Mega Pet Accessories, a local pet shop
 Requirements: any static web server. To work locally:
 
 ```bash
-git clone https://github.com/yourname/megapet
+git clone https://github.com/dimitrios-git/megapet
 cd megapet
 python3 -m http.server 8080
 # open http://localhost:8080
