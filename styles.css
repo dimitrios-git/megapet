@@ -1,0 +1,186 @@
+:root {
+  --primary: #0093DD;
+  --accent: #DD137B;
+  --dark: #1F1A17;
+  --light: #D8D7D3;
+
+  --bg: #fafafa;
+  --fg: var(--dark);
+  --muted: #555;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.logo {
+  width: 160px;
+  max-width: 50%;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  color: var(--primary);
+}
+
+header p {
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+/* LAYOUT: MOBILE FIRST */
+.locations {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.location {
+  --parallax-offset: 0px;
+  flex: 1;
+  min-height: 50vh;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* BACKGROUND IMAGE */
+.location-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+
+  /* Smooth zoom transition */
+  transition: transform 6s ease;
+}
+
+.location-bg-1 {
+  background-image: url('shop1.jpg');
+}
+
+.location-bg-2 {
+  background-image: url('shop2.jpg');
+}
+
+@media (max-width: 767px) {
+  .location-bg {
+    background-position: center calc(50% + var(--parallax-offset, 0px));
+    transition: background-position 0.4s ease-out;
+  }
+}
+
+/* ZOOM EFFECT (desktop only) */
+@media (min-width: 768px) {
+  .location:hover .location-bg {
+    transform: scale(1.15);
+  }
+}
+
+/* CONTENT CARD */
+.location-content {
+  position: relative;
+  z-index: 2;
+  padding: 1.2rem 1.5rem;
+  max-width: 90%;
+
+  /* Clean readable background */
+  background: rgba(255, 255, 255, 0.80);
+
+  /* Smooth glass blur */
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+  color: var(--primary);
+}
+
+.desc {
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.address {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.phone {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.phone a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a.map-link {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a.map-link:hover {
+  text-decoration: underline;
+}
+
+/* DESKTOP SPLIT */
+@media (min-width: 768px) {
+  .locations {
+    flex-direction: row;
+  }
+  .location {
+    border-top: none;
+    border-left: 1px solid #ddd;
+    min-height: calc(100vh - 180px);
+  }
+  .location:first-child {
+    border-left: none;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
