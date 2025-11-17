@@ -1,0 +1,10 @@
+# macOS / Linux junk
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Cache
+*.swp

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mega Pet Accessories - Δύο καταστήματα στα Τρίκαλα.</title>
+  <meta name="description" content="Mega Pet Accessories - Τοπικό pet shop με δύο καταστήματα στα Τρίκαλα. Βρείτε μας εύκολα και γρήγορα." />
+  <link rel="icon" href="favicon.png" type="image/png" />
+
+  <style>
+    :root {
+      --primary: #0093DD;
+      --accent: #EC9E2F;
+      --dark: #1F1A17;
+      --light: #D8D7D3;
+
+      --bg: #fafafa;
+      --fg: var(--dark);
+      --muted: #555;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+
+    .logo {
+      width: 160px;
+      max-width: 50%;
+      margin: 0 auto 1rem;
+      display: block;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+      color: var(--primary);
+    }
+
+    header p {
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    /* grid layout */
+    .locations {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .location {
+      flex: 1;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
+
+    /* Photo box */
+    .photo {
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 4 / 3;
+      background: #eee;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.25rem;
+      color: var(--primary);
+    }
+
+    .desc {
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .address {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+      line-height: 1.4;
+    }
+
+    .phone {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .phone a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a.map-link {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a.map-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      .locations {
+        flex-direction: row;
+      }
+      .location {
+        border-top: none;
+        border-left: 1px solid #ddd;
+      }
+      .location:first-child {
+        border-left: none;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.svg" alt="Mega Pet Logo" class="logo" />
+    <h1>Mega Pet Accessories</h1>
+    <p>Δύο καταστήματα στα Τρίκαλα.</p>
+  </header>
+
+  <div class="locations">
+
+    <!-- LOCATION 1 -->
+    <div class="location">
+      <div class="photo" style="background-image: url('shop1.jpg');"></div>
+
+      <h2>Mega Pet Accessories</h2>
+      <p class="desc">Κατάστημα 1 — Προς Ιωάννινα</p>
+
+      <p class="address">
+        Περιφερειακή Οδός Τρικάλων–Ιωαννίνων,<br />
+        Αλώνια Μπάρας, Τρίκαλα 421 00
+      </p>
+
+      <p class="phone">
+        Τηλέφωνο: <a href="tel:+302431056405">2431 056405</a>
+      </p>
+
+      <a class="map-link"
+        href="https://www.google.com/maps/place/MEGA+PET+%CE%A4%CE%91%CE%A3%CE%99%CE%9F%CE%A5%CE%9B%CE%91%CE%A3+%CE%91%CE%A0%CE%9F%CE%A3%CE%A4%CE%9F%CE%9B%CE%9F%CE%A3/@39.564178,21.780497,16z/data=!4m6!3m5!1s0x13591ec199d97e59:0xccd49edf76a5836c!8m2!3d39.564178!4d21.7804968!16s%2Fg%2F1pp2tx64n?hl=en&entry=ttu&g_ep=EgoyMDI1MTExMi4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank">
+        Δείτε στον χάρτη →
+      </a>
+    </div>
+
+    <!-- LOCATION 2 -->
+    <div class="location">
+      <div class="photo" style="background-image: url('shop2.jpg');"></div>
+
+      <h2>Mega Pet Grand Accessories</h2>
+      <p class="desc">Κατάστημα 2 — Προς Καρδίτσα</p>
+
+      <p class="address">
+      3ο χλμ. Τρικάλων–Καρδίτσας,<br />
+        Τρίκαλα 421 00
+      </p>
+
+      <p class="phone">
+        Τηλέφωνο: <a href="tel:+302431028648">2431 028648</a>
+      </p>
+
+      <a class="map-link"
+        href="https://www.google.com/maps/place/Mega+Pet+Grand/@39.5358898,21.7873419,16z/data=!4m6!3m5!1s0x13591f038bd1af23:0x88714b204f7c2c37!8m2!3d39.5356247!4d21.7883286!16s%2Fg%2F11s0nhl3_v?hl=en&entry=ttu&g_ep=EgoyMDI1MTExMi4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank">
+        Δείτε στον χάρτη →
+      </a>
+    </div>
+
+  </div>
+
+  <footer>
+    Mega Pet Accessories — Pet Shop στα Τρίκαλα
+  </footer>
+</body>
+</html>
+
