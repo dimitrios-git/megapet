@@ -25,27 +25,55 @@ body {
 }
 
 /* HEADER */
-header {
+.hero {
+  width: min(90%, 960px);
+  margin: 2rem auto 1rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 2rem 1rem 1rem;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
 }
 
 .logo {
-  width: 160px;
-  max-width: 50%;
-  margin: 0 auto 1rem;
-  display: block;
+  width: clamp(140px, 30vw, 220px);
 }
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
   color: var(--primary);
 }
 
-header p {
+.tagline {
   color: var(--muted);
-  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    text-align: left;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .logo {
+    flex: 0 0 auto;
+  }
 }
 
 /* LAYOUT: MOBILE FIRST */
